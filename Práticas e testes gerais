@@ -1,0 +1,48 @@
+// Prática de Getter e Setter em C++
+// Dia 08 - 11 - 2022
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+
+using namespace std;
+
+class Pessoa{
+    private:
+    
+    string nome;
+    int idade;
+    
+    public:
+    void setNome(string nomeSetter){
+        nome = nomeSetter;
+    }
+    
+    string getNome(){
+        return nome;
+    }
+    
+    void setIdade(int idadeSetter){
+        idade = idadeSetter;
+    }
+    
+    int getIdade(){
+        return idade;
+    }
+    
+};
+
+int main() {
+    // Write C++ code here
+    Pessoa pessoa1;
+    string temp;
+    int temp1;
+    cout << "Digite seu nome" << endl;
+    getline(cin, temp); //Usado para pegar a linha de string
+    pessoa1.setNome(temp);
+    cout << "Digite sua idade" << endl;
+    cin >> temp1;
+    pessoa1.setIdade(temp1);
+    cout << "Ola " << pessoa1.getNome() << " sua idade atual eh de " << pessoa1.getIdade() << endl;
+
+    return 0;
+}
